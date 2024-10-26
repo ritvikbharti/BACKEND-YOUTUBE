@@ -16,8 +16,18 @@ app.get("/",(req,res)=>{
         res.render("index",{files:files});
         
     })
+    // next();
 
 })
+
+app.post("/create",function(req,res){
+    console.log(req.body);
+    fs.writeFile(`./files/${req.body.title.split(' ').join('')}.txt`,req.body.details,(err)=>{
+
+    } )
+        res.redirect("/")
+});
+
 
 
 
