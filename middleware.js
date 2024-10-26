@@ -2,6 +2,11 @@
 const express = require('express')
 const app = express()
 
+// used to convert the data in to json format
+app.use(express.json());
+
+//  use to read the data from urlencoded format from postman
+app.use(express.urlencoded({extended: true}));
 
 //  miidleware
 app.use((req,res,next)=>{
