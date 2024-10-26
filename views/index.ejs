@@ -22,8 +22,11 @@
                 <% files.forEach(function(val){ %>
                     <div class="task w-72  px-3 py-4 rounded-md bg-zinc-800">
                         <h1 class="text-white text-3xl"><%= val %>  </h1>
-                        <a class="text-blue-800 inline-block mt-3" href="">Read More..</a>
-        
+                        <div class="flew w-full justify-between items-center mt-3">
+                            <a class="text-blue-800 inline-block " href="/file/<%= val%>">Read More..</a>
+                            <a class="text-zinc-600 float-right" href="/edit/<%=val%>">edit</a>
+                        </div>
+                        
                     </div>
                 <% }) %>
 
@@ -33,6 +36,7 @@
        
             
         </div>
+    
     </div>
     <script src="/javascripts/script.js"></script>
     
